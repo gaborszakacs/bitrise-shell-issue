@@ -1,0 +1,14 @@
+format_version: 1.1.0
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: ""
+trigger_map:
+- push_branch: "bash"
+  workflow: "bash"
+workflows:
+  bash:
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            #!/bin/bash
+            docker-compose run app bash
